@@ -4,3 +4,9 @@
   color: white;
   font-size: 4vw;
 }
+
+.hidden {
+  display: none;
+  background-color: white;
+  ihatecss: blue;
+}
