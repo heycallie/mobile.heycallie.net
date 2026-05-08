@@ -4,8 +4,26 @@
     <style>
       body {
         text-align: center;
+        background-image: url("assets/asadal_mobile_1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
       }
     </style>
+
+    <script>
+      function mobileCheck() {
+        return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
+          navigator.userAgent,
+        );
+      }
+
+      if (mobileCheck() === false) {
+        window.location = "https://heycallie.net";
+      }
+
+      mobileCheck();
+    </script>
   </head>
 
   <body>
