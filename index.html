@@ -1,13 +1,25 @@
 <!doctype html>
 <html>
   <head>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/light-mode.css" rel="stylesheet" type="text/css" media="all" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.ibb.co/yBxpWnwd/s-l600-removebg-preview.png"
+    />
+
     <style>
       body {
         text-align: center;
-        background-image: url("assets/asadal_mobile_1.jpg");
+        background-image: url("assets/304-ipod.png");
         background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+        user-select: none;
       }
     </style>
 
@@ -17,21 +29,77 @@
           navigator.userAgent,
         );
       }
-
       if (mobileCheck() === false) {
         window.location = "https://heycallie.net";
       }
-
-      mobileCheck();
     </script>
   </head>
 
   <body>
-    <h1>heycallie: mobile</h1>
-    <p>
-      hi! if you're here, you're either a tester, or a mobile user! great! i
-      haven't gotten anything made for this website yet, so you might as well
-      just leave ^_^
-    </p>
+    <!-- TOP-SCREEN INFORMATION -->
+    <div>
+      <div style="position: fixed; top: 10px; right: 10px">
+        <span id="time" style="color: white; font-size: 3vw">1:22 pm</span>
+      </div>
+    </div>
+
+    <!-- HOME SCREEN ICONS -->
+    <div>
+      <!-- ROW ONE -->
+      <div style="width: 25vw; position: absolute; top: 1vh">
+        <div
+          onclick="open('browser')"
+          style="
+            cursor: default;
+            -webkit-user-select: none;
+            user-select: none;
+            height: fit-content;
+            width: fit-content;
+            text-align: center;
+          "
+        >
+          <img
+            src="assets/safari.png"
+            style="height: 20vw; padding: 10px; padding-bottom: 0px"
+          />
+          <div class="desktopShortcutText">Safari</div>
+        </div>
+      </div>
+
+      <!-- ROW TWO -->
+      <div
+        style="
+          left: 25vw;
+          position: absolute;
+          top: 1vh;
+          width: 25vw;
+          height: 100%;
+        "
+      >
+        <div
+          onclick="open('photos')"
+          style="
+            cursor: default;
+            -webkit-user-select: none;
+            user-select: none;
+            height: fit-content;
+            width: fit-content;
+            text-align: center;
+          "
+        >
+          <img
+            src="assets/photos.png"
+            style="height: 20vw; padding: 10px; padding-bottom: 0px"
+          />
+          <div class="desktopShortcutText">Photos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- APPS -->
+    <div>
+      <!-- BROWSER (safari )-->
+      <div></div>
+    </div>
   </body>
 </html>
