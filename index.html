@@ -28,32 +28,21 @@
         display: block !important;
       }
     </style>
-
-    <script>
-      function mobileCheck() {
-        return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
-          navigator.userAgent,
-        );
-      }
-      //      if (mobileCheck() === false) {
-      //        window.location = "https://heycallie.net";
-      //      }
-
-      function checkThatItWorks() {
-        console.log("Open recieved");
-      }
-
-      function openApp(id) {
-        document.getElementById(id).classList.remove("hidden");
-      }
-    </script>
   </head>
 
   <body>
     <!-- TOP-SCREEN INFORMATION -->
     <div>
-      <div style="position: fixed; top: 1vh; right: 1vw">
-        <span id="time" style="color: white; font-size: 3vw">1:22 pm</span>
+      <div style="position: fixed; top: 0.75vh; right: 4vw">
+        <span id="time" style="color: white; font-size: 3vw; font-family: Arial"
+          >1:22 pm</span
+        >
+      </div>
+
+      <div style="position: fixed; top: 0.75vh; left: 4vw">
+        <span id="time" style="color: white; font-size: 3vw; font-family: Arial"
+          >May 2, 2002</span
+        >
       </div>
     </div>
 
@@ -64,7 +53,7 @@
         style="
           width: 25vw;
           position: absolute;
-          top: 2vh;
+          top: var(--row-distance);
           left: 0vw;
           height: 100%;
         "
@@ -98,7 +87,7 @@
         style="
           left: 25vw;
           position: absolute;
-          top: 2vh;
+          top: var(--row-distance);
           width: 25vw;
           height: 100%;
         "
@@ -132,7 +121,7 @@
         style="
           right: 25vw;
           position: absolute;
-          top: 2vh;
+          top: var(--row-distance);
           width: 25vw;
           height: 100%;
         "
@@ -161,7 +150,7 @@
         style="
           right: 0vw;
           position: absolute;
-          top: 2vh;
+          top: var(--row-distance);
           width: 25vw;
           height: 100%;
         "
@@ -206,6 +195,7 @@
           left: 0px;
         "
       >
+        <button onclick="closeApp('browser')">close</button>
         <h1 style="color: white">hello, world!</h1>
       </div>
     </div>

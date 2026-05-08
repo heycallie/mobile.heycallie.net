@@ -3,8 +3,13 @@
   font-family: Franklin Gothic Regular;
   color: white;
   font-size: 4vw;
+  padding-top: 1vh;
 }
 
 .hidden {
   display: none;
+}
+
+:root {
+  --row-distance: 2.5vh;
 }
