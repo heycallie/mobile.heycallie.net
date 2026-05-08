@@ -3,9 +3,9 @@ function mobileCheck() {
     navigator.userAgent,
   );
 }
-//      if (mobileCheck() === false) {
-//        window.location = "https://heycallie.net";
-//      }
+if (mobileCheck() === false) {
+  window.location = "https://heycallie.net";
+}
 
 function checkThatItWorks() {
   console.log("Open recieved");
