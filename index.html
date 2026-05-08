@@ -32,13 +32,21 @@
       if (mobileCheck() === false) {
         window.location = "https://heycallie.net";
       }
+
+      function checkThatItWorks() {
+        console.log("Open recieved");
+      }
+
+      function openApp(id) {
+        document.getElementById(id).classList.remove("hidden");
+      }
     </script>
   </head>
 
   <body>
     <!-- TOP-SCREEN INFORMATION -->
     <div>
-      <div style="position: fixed; top: 10px; right: 10px">
+      <div style="position: fixed; top: 1vh; right: 1vw">
         <span id="time" style="color: white; font-size: 3vw">1:22 pm</span>
       </div>
     </div>
@@ -48,7 +56,7 @@
       <!-- ROW ONE -->
       <div style="width: 25vw; position: absolute; top: 1vh">
         <div
-          onclick="open('browser')"
+          onclick="openApp('browser')"
           style="
             cursor: default;
             -webkit-user-select: none;
@@ -77,7 +85,7 @@
         "
       >
         <div
-          onclick="open('photos')"
+          onclick="checkThatItWorks()"
           style="
             cursor: default;
             -webkit-user-select: none;
@@ -99,7 +107,20 @@
     <!-- APPS -->
     <div>
       <!-- BROWSER (safari )-->
-      <div></div>
+      <div
+        id="browser"
+        class="hidden"
+        style="
+          height: 100vh;
+          width: 100vw;
+          background-color: black;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        "
+      >
+        <h1 style="color: white">hello, world!</h1>
+      </div>
     </div>
   </body>
 </html>
