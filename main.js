@@ -1,6 +1,6 @@
 function mobileCheck() {
   // removed iPad
-  return /Android|iPhone|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
+  return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(
     navigator.userAgent,
   );
 }
