@@ -28,6 +28,23 @@
         margin-right: auto !important;
         display: block !important;
       }
+
+      .android-action-bar-icon-pack {
+        font-size: 14vw;
+        height: fit-content;
+        width: 15vw;
+        user-select: none;
+        text-align: center;
+      }
+
+      .android-action-bar-icon-pack p:hover {
+        background-color: grey;
+        border-radius: 30%;
+      }
+
+      p {
+        margin: 0;
+      }
     </style>
   </head>
 
@@ -196,16 +213,10 @@
           background-color: black;
         "
       >
-        <button
-          onclick="closeApp('browser')"
-          style="height: 3vh; width: 15vw; font-size: 5vw"
-        >
-          close
-        </button>
-        <!-- <iframe
+        <iframe
           src="https://heycallie.net/blog.html"
           style="height: 100vh; width: 100vw; position: relative"
-        ></iframe> -->
+        ></iframe>
       </div>
     </div>
 
@@ -218,6 +229,14 @@
         height: 8vh;
         background-color: rgb(128, 128, 128, 0.5);
       "
-    ></div>
+    >
+      <div
+        onclick="closeApp('browser')"
+        class="android-action-bar-icon-pack"
+        style="padding-top: 0.25vh; padding-left: 42vw"
+      >
+        <p style="font-family: Android-Action-Bar-Icon-Pack">&#xe001;</p>
+      </div>
+    </div>
   </body>
 </html>
